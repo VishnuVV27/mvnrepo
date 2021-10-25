@@ -22,5 +22,10 @@ pipeline {
                 bat './jenkins/scripts/deliver.bat'
             }
         }
+        stage('output') {
+            steps {
+                java -jar target/my-app-1.0-SNAPSHOT.jar
+            }
+        }
     }
 }
