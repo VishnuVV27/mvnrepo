@@ -22,6 +22,10 @@ pipeline {
                 bat './jenkins/scripts/deliver.bat'
             }
         }
-        
+         stage('output') {
+            steps {
+                bat './jenkins/scripts/java.bat'
+            }
+        }
     }
 }
